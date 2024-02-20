@@ -7,13 +7,13 @@ Este repositório fornece um ambiente de desenvolvimento baseado no Docker. Pers
 
 ## Como usar
 ```
-### Criar e levantar os containers
+# Criar e levantar os containers
 docker-compose up -d
 
-### Iniciar o container Docker
+# Iniciar o container Docker
 docker-compose start
 
-### Parar o container Docker
+# Parar o container Docker
 docker-compose stop
 ```
 
