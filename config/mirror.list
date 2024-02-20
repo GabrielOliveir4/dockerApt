@@ -1,0 +1,59 @@
+############# config ##################
+#
+set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+ set cleanscript  /var/spool/apt-mirror/var/clean.sh
+# set defaultarch  <running host architecture>
+ set postmirror_script /var/spool/apt-mirror/var/postmirror.sh
+# set run_postmirror 0
+set nthreads   25
+set _tilde 0
+#set limit_rate 100k   ## Per thread ##
+#
+############# end config ##############
+
+#bullseye
+deb http://ftp.br.debian.org/debian/ bullseye main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ bullseye main contrib non-free
+deb http://ftp.br.debian.org/debian/ bullseye-updates main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ bullseye-updates main contrib non-free
+deb http://deb.debian.org/ bullseye-security main contrib non-free
+deb-src http://deb.debian.org/ bullseye-security main contrib non-free
+deb http://deb.debian.org/ bullseye-backports main contrib non-free
+deb-src http://deb.debian.org/ bullseye-backports main contrib non-free
+
+#stable
+deb http://ftp.br.debian.org/debian/ stable main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ stable main contrib non-free
+deb http://ftp.br.debian.org/debian/ stable-updates main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ stable-updates main contrib non-free
+deb http://deb.debian.org/ stable-security main contrib non-free
+deb-src http://deb.debian.org/ stable-security main contrib non-free
+deb http://deb.debian.org/ stable-backports main contrib non-free
+deb-src http://deb.debian.org/ stable-backports main contrib non-free
+
+#unstable
+deb http://ftp.br.debian.org/debian/ unstable main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ unstable main contrib non-free
+deb http://ftp.br.debian.org/debian/ unstable-updates main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ unstable-updates main contrib non-free
+deb http://deb.debian.org/ unstable-security main contrib non-free
+deb-src http://deb.debian.org/ unstable-security main contrib non-free
+deb http://deb.debian.org/ unstable-backports main contrib non-free
+deb-src http://deb.debian.org/ unstable-backports main contrib non-free
+
+#bookworm
+deb http://ftp.br.debian.org/debian/ bookworm main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ bookworm main contrib non-free
+deb http://ftp.br.debian.org/debian/ bookworm-updates main contrib non-free
+deb-src http://ftp.br.debian.org/debian/ bookworm-updates main contrib non-free
+deb http://deb.debian.org/ bookworm-security main contrib non-free
+deb-src http://deb.debian.org/ bookworm-security main contrib non-free
+deb http://deb.debian.org/ bookworm-backports main contrib non-free
+deb-src http://deb.debian.org/ bookworm-backports main contrib non-free
+
+clean http://ftp.br.debian.org/debian
+clean http://deb.debian.org

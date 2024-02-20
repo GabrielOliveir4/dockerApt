@@ -1,0 +1,32 @@
+version: "3"
+services:
+  apt-mirror:
+    image: seterrychen/apt-mirror-http-server
+    container_name: apt-mirror
+    environment:
+      - RESYNC_PERIOD=12h
+    ports:
+      - "80:80"
+    volumes:
+      - apt-mirror-data:/var/spool/apt-mirror
+      - ./config/mirror.list:/etc/apt/mirror.list
+      - ./config/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - 9000:9000
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+volumes:
+  #Volume de armazenamento dos arquvivos de repositorio
+  apt-mirror-data:
+    name: apt-mirror-data
+  #Volume para o container gerenciador portainer
+  data:
+    name: data
