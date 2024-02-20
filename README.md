@@ -21,12 +21,12 @@ docker-compose stop
 
 ### Apache
 ```
-Visite [http://ipdoservidor](http://ipdoservidor) para acessar o ambiente Apache.
+Visite [http://ipdoservidor] para acessar o ambiente Apache.
 ```
 
 ### Portainer
 ```
-Acesse [http://ipdoservidor:9000](http://ipdoservidor:9000) para usar o Portainer. Durante o primeiro login, crie suas credenciais de acesso.
+Acesse [http://ipdoservidor:9000] para usar o Portainer. Durante o primeiro login, crie suas credenciais de acesso.
 ```
 
 Esperamos que este ambiente Docker facilite seu desenvolvimento. Sinta-se à vontade para contribuir ou fornecer feedback.
